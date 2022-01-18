@@ -1,6 +1,6 @@
-*{
+/* *{
   border:1px solid black;
-}
+} */
 
 html, body{
   height: 100%;
@@ -57,6 +57,12 @@ float:right;
   float: left;
   height: 52px;
   display: block;
-  margin-left:8%;
+  margin-left:22.5%;
   opacity: .8;
+}
+
+#resImg{
+  max-width:100%;
+  border:none;
+  display:block;
 }
