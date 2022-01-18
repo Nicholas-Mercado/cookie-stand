@@ -4,10 +4,10 @@
 let hours = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 // build 5 objects
 
-
+let shopsSection = document.getElementById('profiles');
 
 let seattle = {
-  location: 'seattle',
+  location: 'Seattle',
   minCust: 23,
   maxCust: 65,
   avgCookieSale: 6.3,
@@ -78,7 +78,7 @@ let dubai = {
 };
 
 let paris = {
-  location: 'paris',
+  location: 'Paris',
   minCust: 20,
   maxCust: 38,
   avgCookieSale: 2.3,
@@ -132,19 +132,42 @@ function randomCust(min, max){
   return number;
 }
 
-// seattle.getCookiesPerHour();
-// console.log(seattle);
-
-
 const allShops = [seattle, tokyo, dubai, paris, lima];
+
+
+
+// Grabs a window in the dom
+
+function renderShops(store) {
+  
+  const articleElem = document.createElement('article');
+  shopsSection.appendChild(articleElem);
+  
+  const h1Elem = document.createElement('h1');
+  h1Elem.textContent = store.location;
+  articleElem.appendChild(h1Elem);
+
+  const ulElem = document.createElement('ul');
+  articleElem.appendChild(ulElem);
+
+  for( let i = 0; i < hours.length; i++){
+    const liElem = document.createElement('li');
+    liElem.textContent = `${hours[i]}: ${store.cookiePerHour[i]} cookies` ;
+    ulElem.appendChild(liElem);
+  }
+  const liElem = document.createElement('li');
+  liElem.textContent = `Total:${store.totalCookieSales}`;
+  ulElem.appendChild(liElem);
+  
+}
+
 function getAllShops() {
   for(let i = 0; i < allShops.length; i++){
     let currentKitten = allShops[i];
     currentKitten.getCookiesPerHour();
-    console.log(allShops[i]);
+    // console.log(allShops[i]);
+    renderShops(currentKitten);
   }
 }
 
 getAllShops();
-console.log();
-
