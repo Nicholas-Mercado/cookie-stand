@@ -172,20 +172,10 @@ let lima = new Shops('Lima', 2, 16, 4.6);
 
 // Grabs a window in the dom
 
-Shops.prototype.renderShops = function () {
-  //created article
-  const articleElem = document.createElement('article');
-  shopsSection.appendChild(articleElem);
 
-  // const h1Elem = document.createElement('h1');
-  // h1Elem.textContent = this.location;
-  // articleElem.appendChild(h1Elem);
-
-  // const ulElem = document.createElement('ul');
-  // articleElem.appendChild(ulElem);
-
+function header(){
   const tableElem = document.createElement('table');
-  articleElem.appendChild(tableElem);
+  shopsSection.appendChild(tableElem);
 
   const tableHeadElem = document.createElement('thead');
   tableElem.appendChild(tableHeadElem);
@@ -193,19 +183,30 @@ Shops.prototype.renderShops = function () {
   const row1 = document.createElement('tr');
   tableHeadElem.appendChild(row1);
 
-  // for (let i = 0; i < hours.length; i++)
   const th1Elem = document.createElement('th');
-  th1Elem.textContent = this.location;
   row1.appendChild(th1Elem);
 
-  // for (let i = 0; i < hours.length; i++) {
-  //   const liElem = document.createElement('li');
-  //   liElem.textContent = `${hours[i]}: ${this.cookiePerHour[i]} cookies`;
-  //   ulElem.appendChild(liElem);
-  // }
-  // const liElem = document.createElement('li');
-  // liElem.textContent = `Total:${this.totalCookieSales}`;
-  // ulElem.appendChild(liElem);
+  for (let i = 0; i < hours.length; i++){
+    const th2Elem = document.createElement('th');
+    th2Elem.textContent = hours[i];
+    row1.appendChild(th2Elem); }
+}
+header();
+
+Shops.prototype.renderShops = function () {
+  let table = document.querySelector('table');
+
+  const row2 = document.createElement('tr');
+  table.appendChild(row2);
+
+  const td = document.createElement('td');
+  td.textContent = this.location;
+  row2.appendChild(td);
+
+  for (let i = 0; i < hours.length; i++){
+    const tdElem = document.createElement('td');
+    tdElem.textContent = this.cookiePerHour[i];
+    row2.appendChild(tdElem); }
 
 };
 
