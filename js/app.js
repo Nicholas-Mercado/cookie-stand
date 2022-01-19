@@ -190,6 +190,18 @@ function header(){
     const th2Elem = document.createElement('th');
     th2Elem.textContent = hours[i];
     row1.appendChild(th2Elem); }
+
+  const th3Elem = document.createElement('th');
+  th3Elem.textContent = 'Daily Local Total';
+  row1.appendChild(th3Elem);
+
+  
+  
+  // const td = document.createElement('td');
+  // td.textContent = ('test');
+  // row.appendChild(td);
+
+
 }
 header();
 
@@ -207,6 +219,11 @@ Shops.prototype.renderShops = function () {
     const tdElem = document.createElement('td');
     tdElem.textContent = this.cookiePerHour[i];
     row2.appendChild(tdElem); }
+
+  const td4Elem = document.createElement('td');
+  td4Elem.textContent = this.totalCookieSales;
+  row2.appendChild(td4Elem);
+
 
 };
 
