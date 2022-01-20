@@ -115,6 +115,16 @@ background-color: lightgray;
   padding-bottom: 50px;
 
 }
+#section4 img{
+  height: 30vw;
+}
+.btn{
+font-size: xx-large;
+color:lightseagreen;
+width: 20vw;
+height: 30vw;
+
+}
 /* MainPage */
 
 /* footer */
