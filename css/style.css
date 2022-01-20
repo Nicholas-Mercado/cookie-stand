@@ -2,67 +2,157 @@
   border:1px solid black;
 } */
 
-html, body{
-  height: 100%;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: seashell;
+}
+/* Header and nav */
+header{
+  background-color: lightsalmon;
+  height: 100px;
 }
 
-body {
+nav{
+  width: 960px;
+  margin: auto;
+}
+
+header img{
+  width: 150px;
+  float: left;
+  margin-top: 30px;
+}
+
+header ul li{
+  display: inline-block;
+  margin-top: 35px;
+  margin-left: 35px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+header h1{
+  color:white;
+  font-size: 40px;
+}
+/* Header and nav */
+
+/* Mainpage */
+main {
+  height: 100%;
+  width: 960px;
   margin: auto;
   
 }
 
-li {
-  display: block;
-  margin-right: 50px;
-  
+main ul {
+  display: flex;
+  justify-content: space-between;
 }
-
-header{
-  height: 16%;
-  width: full;
+#section1{
+  padding-top:75px;
 }
-
-.nav{
-  border-width:1px 0;
-  list-style:none;
-  margin:auto;
-  padding:3%;
-  text-align:center;
-  width: 1200px;
-  
-}
-.nav li{
-  display:inline;
-}
-.nav a{
-  display:inline-block;
+#section1 img{
+  width:500px;
   padding:20px;
-  text-decoration: none;
-  color: #A3481B;
+  padding-left: 0;
 }
-
-.left{
-float: left;
-}
-
-.right{
-float:right;
-}
-.container {
-  position: relative;
+#section1 h2{
+  font-size: x-large;
+  padding:20px;
   text-align: center;
-  color: white;
+  padding-right: 0;
 }
-.logo {
-  float: left;
-  height: 52px;
-  display: block;
-  margin-left:22.5%;
-  opacity: .8;
+#section2{
+  padding-top:50px;
+  padding-bottom: 50px;
+}
+#section2 img {
+  padding:20px;
+  padding-left: 0;
 }
 
-#resImg{
-  max-width:100%;
-  border:none;
-  display:block;
+#section2:last-child {
+  padding:20px;
+  padding-right: 0;
 }
+
+#section2 h2{
+  font-size: x-large;
+  padding:20px;
+  text-align: center;
+  padding-right: 0;
+}
+
+#section2 p{
+  margin: 10px;
+  text-align: center;
+}
+
+#section3 {
+width: 100%;
+height: 200px;
+background-color: lightgray;
+}
+#section3 h2{
+  text-align: center;
+  padding-top:20px;
+  padding-bottom:20px;
+  font-size: x-large;
+}
+#section3 h3{
+  font-size: large;
+}
+#section3 li{
+  text-align: center;
+  padding: 5px;
+}
+
+#section4{
+  padding-top:50px;
+  padding-bottom: 50px;
+
+}
+/* MainPage */
+
+/* footer */
+
+#section5 {
+  background-color: lightsalmon;
+  height: 150px;
+  width: 100%;
+  
+}
+
+#section5 img{
+  margin-top: 50px;
+  margin-left: 5px;
+  width: 100px;
+}
+/* Table styling */
+
+#profiles{
+padding-top: 100px;
+
+}
+table{
+  padding-top: 100px;
+  margin: auto;
+  border: 5px solid black
+}
+
+table thead{
+  background-color: cadetblue;
+
+}
+
+table tr td:first-child{
+  font:bold;
+  font-size: large;
+}
+
+
+
+
