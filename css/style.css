@@ -118,14 +118,13 @@ background-color: lightgray;
 
 }
 #section4 img{
-  height: 30vw;
+  width:100%
 }
 .btn{
 font-size: xx-large;
 color:lightseagreen;
-width: 20vw;
-height: 30vw;
-
+width:100%;
+height: 13vw;
 }
 /* MainPage */
 
