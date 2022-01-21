@@ -110,7 +110,7 @@ function renderFooter() {
     grandTotal += hTotal;
   }
   const tfElem = document.createElement('td');
-  tfElem.textContent = grandTotal;
+  tfElem.textContent = `Grand Daily Total:${grandTotal}`;
   tf.appendChild(tfElem);
 }
 
