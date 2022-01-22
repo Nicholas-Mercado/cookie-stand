@@ -80,6 +80,9 @@ main ul {
   padding:20px;
   padding-right: 0;
 }
+#section1 p{
+line-height: 300%;
+}
 
 #section2 h2{
   font-size: x-large;
@@ -110,6 +113,9 @@ background-color: lightgray;
 #section3 li{
   text-align: center;
   padding: 5px;
+}
+#section3 p{
+  line-height: 150%;
 }
 
 #section4{
